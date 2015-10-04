@@ -12,10 +12,10 @@ import org.apache.uima.cas.Type;
 import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
-/** Stores all the questions and its associated answer candidates.
+/** Store the score for all passages.
  * Updated by JCasGen Thu Oct 01 17:51:09 EDT 2015
  * @generated */
-public class InputDocument_Type extends ComponentAnnotation_Type {
+public class Score_Type extends ComponentAnnotation_Type {
   /** @generated 
    * @return the generator for this type
    */
@@ -25,76 +25,25 @@ public class InputDocument_Type extends ComponentAnnotation_Type {
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
-  			 if (InputDocument_Type.this.useExistingInstance) {
+  			 if (Score_Type.this.useExistingInstance) {
   			   // Return eq fs instance if already created
-  		     FeatureStructure fs = InputDocument_Type.this.jcas.getJfsFromCaddr(addr);
+  		     FeatureStructure fs = Score_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
-  		       fs = new InputDocument(addr, InputDocument_Type.this);
-  			   InputDocument_Type.this.jcas.putJfsFromCaddr(addr, fs);
+  		       fs = new Score(addr, Score_Type.this);
+  			   Score_Type.this.jcas.putJfsFromCaddr(addr, fs);
   			   return fs;
   		     }
   		     return fs;
-        } else return new InputDocument(addr, InputDocument_Type.this);
+        } else return new Score(addr, Score_Type.this);
   	  }
     };
   /** @generated */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = InputDocument.typeIndexID;
+  public final static int typeIndexID = Score.typeIndexID;
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("type.InputDocument");
- 
-  /** @generated */
-  final Feature casFeat_passages;
-  /** @generated */
-  final int     casFeatCode_passages;
-  /** @generated
-   * @param addr low level Feature Structure reference
-   * @return the feature value 
-   */ 
-  public int getPassages(int addr) {
-        if (featOkTst && casFeat_passages == null)
-      jcas.throwFeatMissing("passages", "type.InputDocument");
-    return ll_cas.ll_getRefValue(addr, casFeatCode_passages);
-  }
-  /** @generated
-   * @param addr low level Feature Structure reference
-   * @param v value to set 
-   */    
-  public void setPassages(int addr, int v) {
-        if (featOkTst && casFeat_passages == null)
-      jcas.throwFeatMissing("passages", "type.InputDocument");
-    ll_cas.ll_setRefValue(addr, casFeatCode_passages, v);}
-    
-   /** @generated
-   * @param addr low level Feature Structure reference
-   * @param i index of item in the array
-   * @return value at index i in the array 
-   */
-  public int getPassages(int addr, int i) {
-        if (featOkTst && casFeat_passages == null)
-      jcas.throwFeatMissing("passages", "type.InputDocument");
-    if (lowLevelTypeChecks)
-      return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_passages), i, true);
-    jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_passages), i);
-	return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_passages), i);
-  }
-   
-  /** @generated
-   * @param addr low level Feature Structure reference
-   * @param i index of item in the array
-   * @param v value to set
-   */ 
-  public void setPassages(int addr, int i, int v) {
-        if (featOkTst && casFeat_passages == null)
-      jcas.throwFeatMissing("passages", "type.InputDocument");
-    if (lowLevelTypeChecks)
-      ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_passages), i, v, true);
-    jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_passages), i);
-    ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_passages), i, v);
-  }
- 
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("type.Score");
  
   /** @generated */
   final Feature casFeat_questions;
@@ -106,7 +55,7 @@ public class InputDocument_Type extends ComponentAnnotation_Type {
    */ 
   public int getQuestions(int addr) {
         if (featOkTst && casFeat_questions == null)
-      jcas.throwFeatMissing("questions", "type.InputDocument");
+      jcas.throwFeatMissing("questions", "type.Score");
     return ll_cas.ll_getRefValue(addr, casFeatCode_questions);
   }
   /** @generated
@@ -115,7 +64,7 @@ public class InputDocument_Type extends ComponentAnnotation_Type {
    */    
   public void setQuestions(int addr, int v) {
         if (featOkTst && casFeat_questions == null)
-      jcas.throwFeatMissing("questions", "type.InputDocument");
+      jcas.throwFeatMissing("questions", "type.Score");
     ll_cas.ll_setRefValue(addr, casFeatCode_questions, v);}
     
    /** @generated
@@ -125,7 +74,7 @@ public class InputDocument_Type extends ComponentAnnotation_Type {
    */
   public int getQuestions(int addr, int i) {
         if (featOkTst && casFeat_questions == null)
-      jcas.throwFeatMissing("questions", "type.InputDocument");
+      jcas.throwFeatMissing("questions", "type.Score");
     if (lowLevelTypeChecks)
       return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_questions), i, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_questions), i);
@@ -139,7 +88,7 @@ public class InputDocument_Type extends ComponentAnnotation_Type {
    */ 
   public void setQuestions(int addr, int i, int v) {
         if (featOkTst && casFeat_questions == null)
-      jcas.throwFeatMissing("questions", "type.InputDocument");
+      jcas.throwFeatMissing("questions", "type.Score");
     if (lowLevelTypeChecks)
       ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_questions), i, v, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_questions), i);
@@ -154,13 +103,9 @@ public class InputDocument_Type extends ComponentAnnotation_Type {
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */
-  public InputDocument_Type(JCas jcas, Type casType) {
+  public Score_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
-
- 
-    casFeat_passages = jcas.getRequiredFeatureDE(casType, "passages", "uima.cas.FSArray", featOkTst);
-    casFeatCode_passages  = (null == casFeat_passages) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_passages).getCode();
 
  
     casFeat_questions = jcas.getRequiredFeatureDE(casType, "questions", "uima.cas.FSArray", featOkTst);

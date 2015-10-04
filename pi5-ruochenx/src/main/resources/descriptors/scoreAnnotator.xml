@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
-  <primitive>true</primitive>  <annotatorImplementationName>QuestionAnnotator</annotatorImplementationName>
+  <primitive>true</primitive>  <annotatorImplementationName>ScoreAnnotator</annotatorImplementationName>
   <analysisEngineMetaData>
-    <name>questionAnnotatorDescriptor</name>
-    <description/>
+    <name>Passage Score Annotator</name>
+    <description>Reads InputDocument and Ngram type annotation. This annotator assigns a score with each answer by checking the overlap of n-gram between the given answer and question.</description>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>
@@ -19,10 +19,11 @@
     <capabilities>
       <capability>
         <inputs>
+          <type allAnnotatorFeatures="true">type.Ngram</type>
           <type allAnnotatorFeatures="true">type.InputDocument</type>
         </inputs>
         <outputs>
-          <type allAnnotatorFeatures="true">type.Question</type>
+          <type allAnnotatorFeatures="true">type.Score</type>
         </outputs>
         <languagesSupported/>
       </capability>

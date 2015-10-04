@@ -25,8 +25,8 @@ public class QuestionAnnotator extends JCasAnnotator_ImplBase {
     while (matcher.find(pos)) {
       // found one - create annotation
       Question annotation = new Question(aJCas);
-      annotation.setBegin(matcher.start());
-      annotation.setEnd(matcher.end());
+      annotation.setBegin(matcher.start(2));
+      annotation.setEnd(matcher.end(2));
       annotation.setId(matcher.group(1));
       annotation.setSentence(matcher.group(2));
       //Add empty performance

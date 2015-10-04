@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Mon Sep 28 00:00:30 EDT 2015 */
+/* First created by JCasGen Thu Oct 01 17:51:09 EDT 2015 */
 package type;
 
 import org.apache.uima.jcas.JCas;
@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 /** 
- * Updated by JCasGen Wed Sep 30 16:13:51 EDT 2015
+ * Updated by JCasGen Thu Oct 01 17:51:09 EDT 2015
  * @generated */
 public class Performance_Type extends TOP_Type {
   /** @generated 

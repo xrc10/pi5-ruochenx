@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Mon Sep 28 00:00:30 EDT 2015 */
+/* First created by JCasGen Thu Oct 01 17:51:09 EDT 2015 */
 package type;
 
 import org.apache.uima.jcas.JCas;
@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** Stores the information about a question.
- * Updated by JCasGen Wed Sep 30 16:13:51 EDT 2015
+ * Updated by JCasGen Thu Oct 01 17:51:09 EDT 2015
  * @generated */
 public class Question_Type extends ComponentAnnotation_Type {
   /** @generated 
@@ -126,7 +126,7 @@ public class Question_Type extends ComponentAnnotation_Type {
     if (lowLevelTypeChecks)
       return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_passages), i, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_passages), i);
-  return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_passages), i);
+	return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_passages), i);
   }
    
   /** @generated

@@ -124,5 +124,53 @@ You need to implement the types requried for your ranking model.</description>
         </featureDescription>
       </features>
     </typeDescription>
+  <typeDescription>
+      <name>type.Token</name>
+      <description>Stores a token annotation.</description>
+      <supertypeName>type.ComponentAnnotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>type.Score</name>
+      <description>Store the score for all passages.</description>
+      <supertypeName>type.ComponentAnnotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>questions</name>
+          <description>The questions whose passages have been scored.</description>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+          <elementType>type.Question</elementType>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>type.Ngram</name>
+      <description>Stores the information about an n-gram.</description>
+      <supertypeName>type.ComponentAnnotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>n</name>
+          <description>The number of tokens in this n-gram.</description>
+          <rangeTypeName>uima.cas.Integer</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>tokens</name>
+          <description>Tokens contained in this n-gram.</description>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+          <elementType>type.Token</elementType>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>type.Evaluation</name>
+      <description>Store the result of evaluation.</description>
+      <supertypeName>type.ComponentAnnotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>questions</name>
+          <description>The questions whose performance is evaluated.</description>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
   </types>
 </typeSystemDescription>

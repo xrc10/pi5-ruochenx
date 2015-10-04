@@ -9,6 +9,22 @@
     <delegateAnalysisEngine key="passageAnnotatorDescriptor">
       <import name="descriptors.passageAnnotatorDescriptor"/>
     </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="tokenAnnotator">
+      <import name="descriptors.tokenAnnotator"/>
+    
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="nGramAnnotator">
+      <import name="descriptors.nGramAnnotator"/>
+    
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="scoreAnnotator">
+      <import name="descriptors.scoreAnnotator"/>
+    
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="evaluationAnnotator">
+      <import name="descriptors.evaluationAnnotator"/>
+    
+    </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
     <name>aaeDescriptor</name>
@@ -21,15 +37,27 @@
       <fixedFlow>
         <node>questionAnnotatorDescriptor</node>
         <node>passageAnnotatorDescriptor</node>
+      <node>tokenAnnotator</node>
+        <node>nGramAnnotator</node>
+        <node>scoreAnnotator</node>
+        <node>evaluationAnnotator</node>
       </fixedFlow>
     </flowConstraints>
     <typePriorities/>
     <fsIndexCollection/>
     <capabilities>
       <capability>
-        <inputs/>
+        <inputs>
+          <type allAnnotatorFeatures="true">type.InputDocument</type>
+        </inputs>
         <outputs>
           <type allAnnotatorFeatures="true">type.Question</type>
+        <type allAnnotatorFeatures="true">type.InputDocument</type>
+          <type allAnnotatorFeatures="true">type.Passage</type>
+        <type allAnnotatorFeatures="true">type.Token</type>
+          <type allAnnotatorFeatures="true">type.Score</type>
+          <type allAnnotatorFeatures="true">type.Ngram</type>
+        <type allAnnotatorFeatures="true">type.Evaluation</type>
         </outputs>
         <languagesSupported/>
       </capability>

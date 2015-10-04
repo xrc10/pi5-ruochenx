@@ -1,6 +1,6 @@
 
 
-/* First created by JCasGen Mon Sep 28 00:00:30 EDT 2015 */
+/* First created by JCasGen Thu Oct 01 17:51:09 EDT 2015 */
 package type;
 
 import org.apache.uima.jcas.JCas; 
@@ -10,14 +10,11 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import org.apache.uima.jcas.cas.FSArray;
 
 
-import org.apache.uima.jcas.cas.FSList;
-
-
 /** Stores the information about a question.
- * Updated by JCasGen Wed Sep 30 16:13:51 EDT 2015
- * XML source: /home/ruochenx/git/pi5-ruochenx/pi5-andrewid/src/main/resources/descriptors/typeSystem.xml
+ * Updated by JCasGen Thu Oct 01 17:51:09 EDT 2015
+ * XML source: /home/ruochenx/git/pi5-ruochenx/pi5-ruochenx/src/main/resources/descriptors/typeSystem.xml
  * @generated */
-public class Question extends ComponentAnnotation {
+public class Question extends ComponentAnnotation implements Comparable {
   /** @generated
    * @ordered 
    */
@@ -187,6 +184,20 @@ public class Question extends ComponentAnnotation {
     if (Question_Type.featOkTst && ((Question_Type)jcasType).casFeat_performance == null)
       jcasType.jcas.throwFeatMissing("performance", "type.Question");
     jcasType.ll_cas.ll_setRefValue(addr, ((Question_Type)jcasType).casFeatCode_performance, jcasType.ll_cas.ll_getFSRef(v));}    
-  }
+  
+  @Override
+  public int compareTo(Object compareAnnot) {
+    // TODO Auto-generated method stub
+    int compareId = Integer.parseInt(((Question) compareAnnot).getId());
+    if (compareId > Integer.parseInt(this.getId())) {
+      return -1;
+    } else if (compareId < Integer.parseInt(this.getId())) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }  
+
+}
 
     

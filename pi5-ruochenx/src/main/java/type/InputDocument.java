@@ -1,6 +1,6 @@
 
 
-/* First created by JCasGen Mon Sep 28 00:00:30 EDT 2015 */
+/* First created by JCasGen Thu Oct 01 17:51:09 EDT 2015 */
 package type;
 
 import org.apache.uima.jcas.JCas; 
@@ -10,12 +10,9 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import org.apache.uima.jcas.cas.FSArray;
 
 
-import org.apache.uima.jcas.cas.FSList;
-
-
 /** Stores all the questions and its associated answer candidates.
- * Updated by JCasGen Wed Sep 30 16:13:51 EDT 2015
- * XML source: /home/ruochenx/git/pi5-ruochenx/pi5-andrewid/src/main/resources/descriptors/typeSystem.xml
+ * Updated by JCasGen Thu Oct 01 17:51:09 EDT 2015
+ * XML source: /home/ruochenx/git/pi5-ruochenx/pi5-ruochenx/src/main/resources/descriptors/typeSystem.xml
  * @generated */
 public class InputDocument extends ComponentAnnotation {
   /** @generated
